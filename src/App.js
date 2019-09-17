@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import MainForm from './Components/MainForm'
 import { Alert } from 'reactstrap';
