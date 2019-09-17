@@ -15,7 +15,7 @@ const StatsTable = (props) => {
 
     return(
         <div className="table-responsive">
-            <Table className='table-striped table-bordered'>
+            <Table className='table-striped table-bordered table-hover'>
                 <thead className='thead-dark'>
                     {props.careerData && props.playerData.primaryPosition.name !=='Goalie' &&
                         <tr>
