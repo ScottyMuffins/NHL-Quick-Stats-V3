@@ -61,12 +61,14 @@ class MainForm extends Component {
                 error: 'Some specific error'
             },() => console.log(this.state.error));
         }
-        this.getPlayerInfo(e);
+        this.getPlayerInfo();
         console.log(data.roster);
     }
 
     getPlayerInfo = async (e) => {
-        e.preventDefault();
+        if(e){
+            e.preventDefault();
+        }
         const rosterList = document.getElementById('playerSelect');
         const id = rosterList.options[rosterList.selectedIndex].value;
         const playerAPI_URL = nhlAPI_URL+`people/${id}`;

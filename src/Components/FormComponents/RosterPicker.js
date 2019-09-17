@@ -15,7 +15,7 @@ const RosterPicker = (props) => {
                 <FormGroup>
                     <Label for="playerSelect">Select a Player</Label>
                     <InputGroup>
-                        <Input type="select" name="playerSelect" id='playerSelect'onChange={props.getPlayer} enabled={!props.roster}>
+                        <Input type="select" name="playerSelect" id='playerSelect'onChange={props.getPlayer} enabled={(!props.roster).toString()}>
                             {props.roster && props.roster.sort(compare).map((player) => <option key={player.person.id} value={player.person.id}>{player.person.fullName}</option>)}
                         </Input>
                     </InputGroup>
